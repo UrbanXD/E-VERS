@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&family=Oswald:wght@500&family=Smooch&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+/*
+    #0f4274 - 1kek
+    #155696 - 2kek
+    #1865b1 - 3kek
+    #1e7bd8 - 4kek
+    #2492ff - 5kek
+    #5D5C61 - szurke
+*/
+html {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+body{
+    margin: 0;
+    height: 100vh;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #0f4274;
+    cursor: pointer;
+}
+a:hover{
+    color: #2492ff;
+}
+/*BACKGROUND COLORS*/
+.black-bgc{
+    background: black;
+}
+.white-bgc{
+    background: white;
+}
+.blue-bgc{
+    background: #2492ff;
+}
+.darkblue-bgc{
+    background: #0f4274;
+}
+.blueglass-bgc{
+    background: rgba(36, 146, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.darkgray-bgc{
+    background-color: #141414;
+}
+.brown-bgc{
+    background-color: #A87328;
+}
+/*FONT COLORS*/
+.black-font{
+    color: black;
+}
+.white-font{
+    color: white;
+}
+.blue-font{
+    color: #2492ff;
+}
+/*FONTS*/
+.oswald{
+    font-family: 'Oswald', sans-serif;
+}
+.fuzzybubbles{
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+.smooch{
+    font-family: 'Smooch', cursive;
+}
+.poppins{
+    font-family: 'Poppins', sans-serif;
+}
+/*DISPLAY*/
+.flex{
+    display: flex;
+}
+#intro > *{
+    flex: 1 1 600px;
+}
+/*intros field inline
+style="position: absolute; top: 125px; margin: 250px 0 0 850px;"
+*/
+/* minden flex gyerek egyenlo
+.flex > *{
+    flex-basis: 100%;
+}*/
+.block{
+    display: block;
+}
+.inline-block{
+    display:inline-block;
+}
+.invisible{
+    display: none;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.center{
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+}
+.justify-c{
+    justify-content: space-between;
+}
+.vertical-write{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+.vertical-write-sideways {
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    transform: rotate(180deg);
+}
+.bold{
+    font-weight: 600;
+}
+.height-fit{
+    height: fit-content;
+}
+/*WIDTH*/
+section{
+    min-height: 75.5vh;
+    margin: auto;
+}
+.help{
+    min-height: 340px;
+}
+.max-width{
+    min-width: 100%;
+}
+.hundred-width{
+    width: 100%;
+}
+.ninty-width{
+    width: 90%;
+}
+.eighty-width{
+    width: 80%;
+}
+.seventy-width{
+    width: 70%;
+}
+.sixty-width{
+    width: 60%;
+}
+.fiftyfive-width{
+    width: 55%;
+}
+.fifty-width{
+    width: 50%;
+}
+.fourty-width{
+    width: 40%;
+}
+.thirty-width{
+    width: 30%;
+}
+.twenty-width{
+    width: 20%;
+}
+.fifteen-width{
+    width: 15%;
+}
+.ten-width{
+    width: 10%;
+}
+.ninehunderd-px{
+    width: min(100%, 900px);
+}
+/*TEXTS*/
+.text-extra-big{
+    font-size: clamp(4.69rem, 4.08rem + 3.05vw, 6.25rem);
+    font-weight: 600;
+}
+span {
+    color: #2492ff;
+}
+.text-big{
+    font-size: clamp(3.13rem, 2.52rem + 3.05vw, 4.69rem);
+}
+.text-medium{
+    font-size: clamp(1.30rem, 0.76rem + 2.68vw, 2.67rem);
+}
+.text-normal{
+    font-size: clamp(1.08rem, 0.67rem + 2.06vw, 2.14rem);
+}
+.text-small{
+    font-size: clamp(0.75rem, 0.51rem + 1.20vw, 1.37rem);
+}
+.text-extra-small {
+    font-size: clamp(0.63rem, 0.44rem + 0.91vw, 1.09rem);
+}
+.outline{
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.justify{
+    text-align: justify;
+}
+/*BUTTONS*/
+.button1{
+    box-shadow: 12px 13px 0px -2px #ffffff;
+    background-color:  #0f4274;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size:25px;
+    border: none;
+}
+.button1:hover{
+    background-color: white;
+    color: #0f4274;
+    box-shadow: -12px -13px 0px -2px #0f4274;
+}
+/*CUSTOM ELEMENTS*/
+.triangle{
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    border-top: 150px solid #141414;
+    filter: drop-shadow(0 2px 4px #141414);
+    z-index: 2;
+}
+.fixed{
+    position: fixed;
+    top: 0;
+    padding-top: 15px;
+
+}
+.container{
+    position: relative;
+}
+.element{
+    position: absolute;
+}
+input:not(:placeholder-shown)  ~ .form-span,
+input:focus ~ .form-span
+{
+    color: #0f4274;
+    transform: translateY(-25px);
+}
+.book {
+    height: 200px;
+    width: 45px;
+    float: left;
+    color: white;
+    font-size: 0.9em;
+    font-family: Verdana, sans-serif;
+    margin: 10px 5px;
+    transition: transform 0.4s ease;
+}
+
+.book:hover {
+    transform: scale(1.05);
+}
+
+.book-green {
+    background-color: darkgreen;
+    border-left: 2px solid darkgreen;
+    border-right: 2px solid darkgreen;
+}
+
+.book-blue {
+    background-color: #0C347D;
+    border-left: 2px solid #0C347D;
+    border-right: 2px solid #0C347D;
+}
+
+.book-umber {
+    background-color: #6E260E;
+    border-left: 2px solid #6E260E;
+    border-right: 2px solid #6E260E;
+}
+
+.book-springer {
+    background-color: #EDED80;
+    border-left: 2px solid #EDED80;
+    border-right: 2px solid #EDED80;
+    color: black;
+}
+
+.book h2 {
+    padding: 0;
+    font-size: 1em;
+    transform-origin: 0% 0%;
+    transform: rotate(0.25turn) translateY(-35px);
+    width: 170px;
+}
+
+.book h3 {
+    padding: 0;
+    font-size: 0.7em;
+    transform-origin: 0 0;
+    transform: rotate(0.25turn) translateY(-15px) translateX(-20px);
+    width: 150px;
+}
+/*
+  --step--2: clamp(0.43rem, 0.33rem + 0.52vw, 0.70rem);
+  --step--1: clamp(0.52rem, 0.38rem + 0.69vw, 0.88rem);
+  --step-0: clamp(0.63rem, 0.44rem + 0.91vw, 1.09rem);
+  --step-1: clamp(0.75rem, 0.51rem + 1.20vw, 1.37rem);
+  --step-2: clamp(0.90rem, 0.58rem + 1.58vw, 1.71rem);
+  --step-3: clamp(1.08rem, 0.67rem + 2.06vw, 2.14rem);
+  --step-4: clamp(1.30rem, 0.76rem + 2.68vw, 2.67rem);
+  --step-5: clamp(1.56rem, 0.86rem + 3.48vw, 3.34rem);*/

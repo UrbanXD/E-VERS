@@ -1,0 +1,70 @@
+<section class="max-width flex oswald" id="registration">
+    <div id="reg" class="eighty-width flex white-bgc container" style="margin: 50px 200px;">
+        <div class="twenty-width darkgray-bgc container">
+            <div class="text-normal bold white-font" style="margin: 20px 20px;">E-<span>VERS</span></div>
+            <div class="text-extra-big white-font vertical-write-sideways float-right smooch element" style="margin: 25px 5px; bottom: 0; right: 0;">Regisztráció</div>
+        </div>
+        <div class="eighty-width container" style="margin: 5px 100px;">
+            <form id="register" name="register" action="" method="POST">
+                <div class="black-font text-medium bold center" style="margin: 20px 0;">Hozza létre a fiókját!</div>
+                <div class="hundred-width container input-control" style="margin-top: 10px;">
+                    <input type="text" placeholder=" " id="reg-username" name="reg-username" class="hundred-width text-small" style="margin: 10px 0; border: none; border-bottom: 2px solid #333333; outline: none; padding: 5px 0;">
+                    <span class="text-small black-font bold element form-span" style="margin: 5px 0; left: 0; pointer-events: none; transition: 0.5s;"><i class="fas fa-user"> Felhasználónév</i></span>
+                    <div class="error element" style="top:0; right: 0; margin: 10px;"></div>
+                </div>
+                <div class="hundred-width container input-control" style="margin-top: 10px;">
+                    <input type="text" placeholder=" " id="reg-email" name="reg-email" class="hundred-width text-small" style="margin: 10px 0; border: none; border-bottom: 2px solid #333333; outline: none; padding: 5px 0;">
+                    <span class="text-small black-font bold element form-span" style="margin: 5px 0; left: 0; pointer-events: none; transition: 0.5s;"><i class="fas fa-at"> Email</i></span>
+                    <div class="error element" style="top:0; right: 0; margin: 10px;"></div>
+                </div>
+                <div class="hundred-width container input-control" style="margin-top: 10px;">
+                    <input type="password" placeholder=" " id="reg-password" name="reg-password" class="hundred-width text-small" style="margin: 10px 0; border: none; border-bottom: 2px solid #333333; outline: none; padding: 5px 0;">
+                    <span class="text-small black-font bold element form-span" style="margin: 5px 0; left: 0; pointer-events: none; transition: 0.5s;"><i class="fas fa-lock"> Jelszó</i></span>
+                    <div class="error element" style="top:0; right: 0; margin: 10px;"></div>
+                </div>
+                <div class="hundred-width container input-control" style="margin-top: 10px;">
+                    <input type="password" placeholder=" " id="reg-rpassword" name="reg-rpassword" class="hundred-width text-small" style="margin: 10px 0; border: none; border-bottom: 2px solid #333333; outline: none; padding: 5px 0;">
+                    <span class="text-small black-font bold element form-span" style="margin: 5px 0; left: 0; pointer-events: none; transition: 0.5s;"><i class="fas fa-lock"> Jelszó megerősítése</i></span>
+                    <div class="error element" style="top:0; right: 0; margin: 10px;"></div>
+                </div>
+                <div class="hundred-width flex justify-c container" style="margin: 10px 0;" id="registerChecker"></div>
+                <input type="checkbox" name="reg-checkbox1" class="reg-checkbox"><span>Elfogadom az oldal <a href="#" ><u>szabályzatát</u></a>!</span>
+                <div class="hundred-width center container" style="margin-top: 10px;">
+                    <input type="submit" id="reg-submit" name="reg-submit" value="Regisztráció" class="thirty-width text-small blue-bgc white-font" style="cursor: pointer; border: none; padding: 10px;" disabled>
+                </div>
+            </form>
+        </div>
+        <div class="black-font text-small bold element" style="margin: 5px 5px; right: 0px; bottom: 0;"><a id="iha">Már rendelkezem saját fiókkal!</a></div>
+    </div>
+
+    <div id="log" class="eighty-width flex white-bgc container invisible" style="margin: 50px 200px;">
+        <div class="twenty-width darkgray-bgc container">
+            <div class="text-normal bold white-font" style="margin: 20px 20px;">E-<span>VERS</span></div>
+            <div class="text-extra-big white-font vertical-write-sideways float-right smooch element" style="margin: 25px 5px; bottom: 0; right: 0;">Bejelentkezés</div>
+        </div>
+        <div class="eighty-width container" style="margin: 5px 100px;">
+            <form id="login" name="login" action="" method="POST">
+                <div class="black-font text-medium bold center" style="margin: 20px 0;">Jelentkezzen be fiókjába!</div>
+                <div class="hundred-width container input-control" style="margin-top: 10px;">
+                    <input type="text" placeholder=" " id="log-email" name="log-email" class="hundred-width text-small" style="margin: 10px 0; border: none; border-bottom: 2px solid #333333; outline: none; padding: 5px 0;">
+                    <span class="text-small black-font bold element form-span" style="margin: 5px 0; left: 0; pointer-events: none; transition: 0.5s;"><i class="fas fa-at"> Email</i></span>
+                    <div class="error element" style="top:0; right: 0; margin: 10px;"></div>
+                </div>
+                <div class="hundred-width container input-control" style="margin-top: 10px;">
+                    <input type="password" placeholder=" " id="log-password" name="log-password" class="hundred-width text-small" style="margin: 10px 0; border: none; border-bottom: 2px solid #333333; outline: none; padding: 5px 0;">
+                    <span class="text-small black-font bold element form-span" style="margin: 5px 0; left: 0; pointer-events: none; transition: 0.5s;"><i class="fas fa-lock"> Jelszó</i></span>
+                    <div class="error element" style="top:0; right: 0; margin: 10px;"></div>
+                </div>
+                <div class="hundred-width flex justify-c container" style="margin: 10px 0;" id="loginChecker"></div>
+                <div class="hundred-width block container">
+                    <input type="checkbox" name="log-checkbox1" class="float-left"><span>Jelszó megjegyzése <a href="#" ><u>szabályzatát</u></a>!</span>
+                    <span class="float-right"><a href="#" >Elfelejtette jelszavát?</a></span>
+                </div>
+                    <div class="hundred-width center container" style="margin-top: 10px;">
+                    <input type="submit" id="log-submit" name="log-submit" value="Bejelentkezés" class="thirty-width text-small blue-bgc white-font" style="cursor: pointer; border: none; padding: 10px;" disabled>
+                </div>
+            </form>
+        </div>
+        <div class="black-font text-small bold element" style="margin: 5px 5px; right: 0px; bottom: 0;"><a id="idha">Még nem rendelkezem saját felhasználóval!</a></div>
+    </div>
+</section>

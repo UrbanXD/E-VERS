@@ -1,0 +1,90 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.0.1
+-- http://www.phpmyadmin.net
+--
+-- Hoszt: localhost
+-- Létrehozás ideje: 2022. márc. 07. 21:00
+-- Szerver verzió: 5.1.36
+-- PHP verzió: 5.3.0
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Adatbázis: `e-vers`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet: `poets`
+--
+
+CREATE TABLE IF NOT EXISTS `poets` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(25) NOT NULL,
+  `nationality` varchar(3) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+
+--
+-- A tábla adatainak kiíratása `poets`
+--
+
+INSERT INTO `poets` (`id`, `name`, `nationality`) VALUES
+(1, 'John Milton', 'eng'),
+(2, 'William Golding', 'eng'),
+(3, 'William Blake', 'eng'),
+(4, 'Kosztolányi Dezsö', 'hun'),
+(5, 'Radnóti Miklós', 'hun'),
+(6, 'Arany János', 'hun'),
+(7, 'József Attila', 'hun'),
+(8, 'Petöfi Sándor', 'hun');
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet: `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=30 ;
+
+--
+-- A tábla adatainak kiíratása `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
+(1, 'test', 'sadsda@gmail.com', 'asd'),
+(2, 'Tesztfiok', 'teszt@gmail.com', '0b8b99a8625f613bf11c458c6f2fcb73'),
+(3, 'Te', 'tes@gmail.com', '28b662d883b6d76fd96e4ddc5e9ba780'),
+(4, 'asd', 'asd@gmail.com', '7815696ecbf1c96e6894b779456d330e'),
+(5, 'helo', 'helo@gmail.com', 'c3557ca22ada1ccafcc43f8013ef0251'),
+(6, 'elso', 'elso@gmail.com', '6e317dbf8a7967e18842c532069e11a5'),
+(7, 'masodik', 'masodik@gmail.com', '19248fa849638e84819f18f7d39a1fe7'),
+(8, 'asdxd', '', 'd41d8cd98f00b204e9800998ecf8427e'),
+(9, 'ElsoFiok', 'elsofiok@gmail.com', '6187d27bc81985b872ca8e13e1e6f05a'),
+(10, 'MasodikFiok', 'asd', '7815696ecbf1c96e6894b779456d330e'),
+(11, 'asda', 'xasdf', 'd41d8cd98f00b204e9800998ecf8427e'),
+(12, 'awsccac', 'csaca', 'd41d8cd98f00b204e9800998ecf8427e'),
+(13, 'masodikxd', 'asdaxcf', 'd41d8cd98f00b204e9800998ecf8427e'),
+(14, 'assacxasc', 'afeqwwd', 'd41d8cd98f00b204e9800998ecf8427e'),
+(15, 'acaeca', 'ascaasaxwq', 'd41d8cd98f00b204e9800998ecf8427e'),
+(16, 'masodikacace', 'wqeqweeq', 'd41d8cd98f00b204e9800998ecf8427e'),
+(17, 'af ewa ef', 'acczvrs', 'd41d8cd98f00b204e9800998ecf8427e'),
+(18, 'qweeqwe', 'wqeqeqeqeq', 'd41d8cd98f00b204e9800998ecf8427e'),
+(19, 'asdsa', 'sadxxa@gmail.com', 'd41d8cd98f00b204e9800998ecf8427e'),
+(20, 'asdfsdf', 'xaf', 'd41d8cd98f00b204e9800998ecf8427e'),
+(21, 'ascevarwv f', 'rgbrsebteg ', 'd41d8cd98f00b204e9800998ecf8427e'),
+(22, 'arrfgawgawg a', 'elsofioasfafk@gmail.com', '0675943da2a0a44fc10b7b26ff1f6f9d'),
+(23, 'sa', 'fffff', 'd41d8cd98f00b204e9800998ecf8427e'),
+(24, 'NegyedikFiok', 'negyedik@gmail.com', '0976f135ab6508517723d3dfff008516'),
+(25, 'OtodikFiok', 'otodik@gmail.com', '57bac9a90a1626a2f2cd9c38d3969b20'),
+(26, 'Hatodik', 'hatodik@gmail.com', '344a40cb678bdb30bf7a07cc5735a0ee'),
+(27, 'Hetedik', 'hetedik@gmail.com', 'dac9839491c17015ae89c9db02de46e7'),
+(28, 'asd123', 'sasadd@gmail.com', '6f6f5d3fb3c876300515eb69354d4ea6'),
+(29, 'ASDsasad', 'elsoasdfiok@gmail.com', '6e21b2c73ac544a9fff7e677e3d17656');
