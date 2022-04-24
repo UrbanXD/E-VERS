@@ -76,7 +76,7 @@ if (isset($_POST['reg-submit'])) {
             } else {
                 #szabad username
                 echo "<script>alert('SzabadUser')</script>";
-                $sql3 = "INSERT INTO users VALUES (' ', '$username', '$email', '$password')";
+                $sql3 = "INSERT INTO users VALUES (' ', '$username', '$email', '$password', ' ')";
                 $queryinsertrow1 = mysqli_query($connect, $sql3) or die ("Error while inserting new row");
                 header("Location:landingPage.php");
                 exit();

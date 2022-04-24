@@ -3,7 +3,7 @@
     ini_set('session.gc_maxlifetime',86400);
     session_start();
     error_reporting(0);
-    $sql1    = "SELECT name FROM poets WHERE nationality = '". $nationality ."' ORDER BY name;";
+    $sql1    = "SELECT id, name FROM poets WHERE nationality = '". $nationality ."' ORDER BY name;";
     $query1 = mysqli_query($connect, $sql1);
     $book_color = array("green", "blue", "umber", "springer");
     $book_type  = array("normal", "tilted");
@@ -19,7 +19,7 @@
         if($book_type[$type_rand_key] == "tilted" && $length > $book_count){
             $style = " style='transform: translateY(-3px) translateX(15px) rotate(9deg); margin-right: inherit'>";
         }
-        echo "<div class='book book-". $book_color[$color_rand_key] ."'". $style ."<h2 style='transform-origin: 0% 0%; transform: rotate(0.25turn) translateY(-35px);'>". $poet ."</h2></div>";
+        echo "<a href='http://localhost:63342/E-VERS/filp_book.php?poet=". $row1["id"] ."'><div class='shelf_book book-". $book_color[$color_rand_key] ."'". $style ."<h2 style='transform-origin: 0% 0%; transform: rotate(0.25turn) translateY(-35px);'>". $poet ."</h2></div></a>";
         if($book_count > 14){
             echo "</div>";
             echo "<div class='container' style='background: #A0522D; height: 225px; margin: 25px 25px;'>";

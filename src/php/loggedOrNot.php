@@ -14,12 +14,13 @@
         $row1     = mysqli_fetch_assoc($query1);
         $username = $row1['username'];
         $email    = $row1['email'];
-        $sql2     = "SELECT COUNT(*) AS userscount
+        $sql2     = "SELECT COUNT(*) AS userscount, admin
                              FROM users";
         $query2   = mysqli_query($connect, $sql2);
         $row2     = mysqli_fetch_assoc($query2);
         $count    = $row2['userscount'];
-        $html     = "Felhasználó: $username". "<br>" ."Email: $email". "<br>" ."Összes felhasználó: $count". "<br>" ."<a href='src/php/logout.php'>kijelentkezes</a>";
+        $admin    = $row2['admin'];
+        $html     = "Felhasználó: $username". "<br>" ."Email: $email". "<br>" ."Összes felhasználó: $count". "<br>" ."<a href='src/php/logout.php'>kijelentkezes</a>". "<br>" ."<a href='http://localhost:63343/E-VERS/admin.php' id='admin' class='white-font'>Admin Felulet</a>";
 
         if($needPopup) {
             echo "<script>openModal('success', 'Sikeres bejelentkezes');</script>";
