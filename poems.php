@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="hu-HU">
 <head>
@@ -14,12 +13,14 @@
     <link rel="icon" type="image/png" href="src/css/media/images/logo.png">
 </head>
 <body>
+<!----- Menu ----->
 <div style="max-height: 25vh;">
     <?php include'navigation.php'; ?>
 </div>
-<div style="max-height: 75vh; position: fixed;">
-    <section class="max-width blue-bgc" id="poem" style="background-size: cover;">
-        <div class="eighty-width brown-bgc" style="min-width: 100%; height: 550px; margin: 75px auto; border: 10px #7B3F00 solid; overflow: hidden;">
+
+<!----- Kezdőlap ----->
+<div class="max-width" style="margin: 0 0;">
+    <section class="max-width flex" id="englishPoets" style="background: url('src/css/media/images/library.jpg') center ; background-size: cover;">
         <?php
         $connect = mysqli_connect('localhost', 'root', '', 'E-VERS') or die("CONNECT ERROR");
         ini_set('session.gc_maxlifetime',86400);
@@ -38,12 +39,12 @@
             echo "<h1>".$book_title."</h1>";
             echo "<h2>".$poet."</h2>";
             echo "<pre><p>".$book_content."</p></pre>";
-            echo "<div class='book'>";
+            echo "</div>";
             echo "</div>";
             echo "</div>";
         }
         ?>
-        </div>
     </section>
 </div>
 </body>
+</html>

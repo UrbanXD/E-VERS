@@ -17,9 +17,9 @@
         $type_rand_key = array_rand($book_type);
         $style = ">";
         if($book_type[$type_rand_key] == "tilted" && $length > $book_count){
-            $style = " style='transform: translateY(-3px) translateX(15px) rotate(9deg); margin-right: inherit'>";
+            $style = " style='transform: translateY(-3px) translateX(15px) rotate(9deg); margin-right: 25px'>";
         }
-        echo "<a href='http://localhost:63342/E-VERS/poems.php?poet=". $row1["id"] ."'><div class='book book-". $book_color[$color_rand_key] ."'". $style ."<h2 style='transform-origin: 0% 0%; transform: rotate(0.25turn) translateY(-35px);'>". $poet ."</h2></div></a>";
+        echo "<a href='http://localhost:63342/E-VERS/poems.php?poet=". $row1["id"] ."'><div class='book book-". $book_color[$color_rand_key] ."'". $style ."<p style='transform-origin: 0% 0%; transform: rotate(0.25turn) translateY(-35px); margin-left: 15px;'>". $poet ."</p></div></a>";
         if($book_count > 14){
             echo "</div>";
             echo "<div class='container' style='background: #A0522D; height: 225px; margin: 25px 25px;'>";
