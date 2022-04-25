@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Hoszt: localhost
--- Létrehozás ideje: 2022. márc. 07. 21:00
+-- Létrehozás ideje: 2022. ápr. 25. 19:52
 -- Szerver verzió: 5.1.36
 -- PHP verzió: 5.3.0
 
@@ -16,15 +16,53 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- --------------------------------------------------------
 
 --
+-- Tábla szerkezet: `books`
+--
+
+CREATE TABLE IF NOT EXISTS `books` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `poetid` int(11) NOT NULL,
+  `title` varchar(20) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
+  `content` text CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=62 ;
+
+--
+-- A tábla adatainak kiíratása `books`
+--
+
+INSERT INTO `books` (`id`, `poetid`, `title`, `content`) VALUES
+(61, 8, 'SZÃœLÅFÃ–LDEMEN', 'Itt szÃ¼lettem Ã©n ezen a tÃ¡jon,\r\nAz alfÃ¶ldi szÃ©p nagy rÃ³nasÃ¡gon,\r\nEz a vÃ¡ros szÃ¼letÃ©sem helye,\r\nMintha dajkÃ¡m dalÃ¡val vÃ³n tele,\r\nMost is hallom e dalt, elhangzott bÃ¡r:\r\n"CserebogÃ¡r, sÃ¡rga cserebogÃ¡r!"\r\n\r\nUgy mentem el innen, mint kis gyermek,\r\nÃ‰s mint meglett ember, Ãºgy jÃ¶ttem meg.\r\nHej azÃ³ta hÃºsz esztendÅ‘ telt el\r\nMegrakodva bÃºval Ã©s Ã¶rÃ¶mmel...\r\nHÃºsz esztendÅ‘... az idÅ‘ hogy lejÃ¡r!\r\n"CserebogÃ¡r, sÃ¡rga cserebogÃ¡r!"\r\n\r\nHol vagytok, ti rÃ©gi jÃ¡tszÃ³tÃ¡rsak?\r\nKÃ¶zÃ¼letek csak egyet is lÃ¡ssak!\r\nFoglaljatok helyet itt mellettem,\r\nHadd felejtsem el, hogy fÃ©rfi lettem,\r\nHogy vÃ¡llamon huszonÃ¶t Ã©v van mÃ¡r...\r\n"CserebogÃ¡r, sÃ¡rga cserebogÃ¡r!"\r\n\r\nMint nyugtalan madÃ¡r az Ã¡gakon,\r\nHelyrÃ¼l-helyre rÃ¶pkÃ¶d gondolatom,\r\nSzedegeti a sok szÃ©p emlÃ©ket,\r\nMint a mÃ©h a virÃ¡grÃ³l a mÃ©zet;\r\nMinden rÃ©gi kedves helyet bejÃ¡r...\r\n"CserebogÃ¡r, sÃ¡rga cserebogÃ¡r!"\r\n\r\nGyermek vagyok, gyermek lettem Ãºjra,\r\nLovagolok fÅ±zfasÃ­pot fÃºjva,\r\nLovagolok szilaj nÃ¡dparipÃ¡n,\r\nVÃ¡lyuhoz mÃ©k, lovam inni kivÃ¡n,\r\nMegitattam, gyi lovam, gyi BetyÃ¡r...\r\n"CserebogÃ¡r, sÃ¡rga cserebogÃ¡r!"\r\n\r\nMegkondÃºl az esteli harangszÃ³,\r\nKifÃ¡radt mÃ¡r a lovas Ã©s a lÃ³,\r\nHazamegyek, Ã¶lÃ©be vesz dajkÃ¡m,\r\nAz altatÃ³ nÃ³ta hangzik ajkÃ¡n,\r\nHallgatom s fÃ©lÃ¡lomban vagyok mÃ¡r...\r\n"CserebogÃ¡r, sÃ¡rga cserebogÃ¡r!"...'),
+(60, 8, 'EGY KÃ–NYVÃRUS EMLÃ', 'Az Ã©letcÃ©l boldogsÃ¡g, de elÃ©bb\r\nFÃ¡radni kell, hogy ezt a cÃ©lt elÃ©rd,\r\nUgy ingyen ahhoz senki sem jut el,\r\nAhhoz nagyon sok mindenfÃ©le kell:\r\nA becsÃ¼lettÅ‘l soha el ne tÃ©rj\r\nSem indulatbÃ³l, sem pedig dijÃ©rt,\r\nSzeresd hiven felebarÃ¡tidat,\r\nNe vond fÃ¶l kÃ¶zted s mÃ¡s kÃ¶zt a hidat,\r\nA hon nevÃ©t, a drÃ¡ga szent hazÃ¡t\r\nSzivednek legtisztÃ¡bb helyÃ©re zÃ¡rd,\r\nS imÃ¡dd az istent, s mindenekfelett\r\nÃruld erÅ‘sen kÃ¶ltemÃ©nyimet.'),
+(59, 8, '1848', 'EzernyolcszÃ¡znegyvennyolc! az Ã©gen\r\nEgy Ãºj csillag, vÃ©rpiros sugÃ¡ra\r\nÃ‰letszÃ­nt vet a betegsÃ©gÃ©ben\r\nMeghalvÃ¡nyult szabadsÃ¡g arcÃ¡ra.\r\n\r\nSzent szabadsÃ¡g, Ãºjabb megvÃ¡ltÃ³ja\r\nA mÃ¡sodszor sÅ±lyedt embereknek,\r\nDrÃ¡ga Ã©lted miljom s miljom Ã³ja,\r\nNe fÃ©lj, tÃ©ged nem feszÃ­tenek meg.\r\n\r\nElbuvÃ©k a bÃ©kessÃ©g galambja,\r\nFÃ©szke mÃ©lyÃ©n turbÃ©kolni sem mer;\r\nHÃ¡borÃºnak Ã¶lyve csattogtatja\r\nSzÃ¡rnyait a lÃ©gben vad Ã¶rÃ¶mmel.\r\n\r\nHah, ti gyÃ¡vÃ¡k, ti mÃ¡ris remegtek?\r\nEz csak kezdet, ez csak gyermekjÃ¡tÃ©k...\r\nHÃ¡tha mindazok beteljesednek,\r\nAmiket Ã©n Ã¡lmaimban lÃ¡tÃ©k!\r\n\r\nEljÃ¶n, eljÃ¶n az itÃ©let napja,\r\nA nagy isten vÃ©ritÃ©letet tart,\r\nS mÃ­g jutalmÃ¡t jÃ³, rosz meg nem kapja,\r\nMÃ¡r nyugonni sem fog addig a kard!'),
+(58, 7, 'TALÃN ELTÃœNÃ–K HIR', 'TalÃ¡n eltÃ¼nÃ¶k hirtelen,\r\nakÃ¡r az erdÅ‘ben a vadnyom.\r\nElpazaroltam mindenem,\r\namirÅ‘l szÃ¡mot kÃ©ne adnom.\r\n\r\nMÃ¡r bimbÃ³s gyermek-testemet\r\nszem-marÃ³ fÃ¼stÃ¶n szÃ¡ritottam.\r\nBÃ¡nat szedi szÃ©t eszemet,\r\nha megtudom, mire jutottam.\r\n\r\nKorÃ¡n vÃ¡jta belÃ©m fogÃ¡t\r\na vÃ¡gy, mely idegenbe tÃ©vedt.\r\nMost rezge megbÃ¡nÃ¡s fog Ã¡t:\r\nvÃ¡rhattam volna mÃ©g tiz Ã©vet.\r\n\r\nDacbÃ³l se fogtam fÃ¶l soha\r\nÃ©rtelmÃ©t az anyai szÃ³nak.\r\nMajd Ã¡rva lettem, mostoha\r\ns kirÃ¶hÃ¶gtem az oktatÃ³mat.\r\n\r\nIfjusÃ¡gom, e zÃ¶ld vadont\r\nszabadnak hittem Ã©s Ã¶rÃ¶knek\r\nÃ©s most kÃ¶nnyezve hallgatom,\r\na szÃ¡raz Ã¡gak hogy zÃ¶rÃ¶gnek.'),
+(56, 7, 'SZÃœLETÃ‰SNAPOMRA', 'HarminckÃ©t Ã©ves lettem Ã©n â€“\r\nmeglepetÃ©s e kÃ¶ltemÃ©ny\r\ncsecse\r\nbecse:\r\n\r\najÃ¡ndÃ©k, mellyel meglepem\r\ne kÃ¡vÃ©hÃ¡zi szegleten\r\nmagam\r\nmagam.\r\n\r\nHarminckÃ©t Ã©vem elszelelt\r\ns mÃ©g havi kÃ©tszÃ¡z sose telt.\r\nAz Ã¡m,\r\nHazÃ¡m!\r\n\r\nLehettem volna oktatÃ³,\r\nnem ily tÃ¶ltÅ‘toll koptatÃ³\r\nszegÃ©ny\r\nlegÃ©ny.\r\n\r\nDe nem lettem, mert Szegeden\r\neltanÃ¡csolt az egyetem\r\nfura\r\nura.\r\n\r\nIntelme gyorsan, nyersen Ã©rt\r\na â€žNincsen apÃ¡mâ€ versemÃ©rt,\r\na hont\r\nkivont\r\n\r\nszablyÃ¡val Ã³vta ellenem.\r\nIdeidÃ©zi szellemem\r\nhevÃ©t\r\ns nevÃ©t:\r\n\r\nâ€žÃ–n, amig szÃ³bÃ³l Ã©rtek Ã©n,\r\nnem lesz tanÃ¡r e fÃ©ltekÃ©nâ€ â€“\r\ngagyog\r\ns ragyog.\r\n\r\nHa Ã¶rÃ¼l Horger Antal Ãºr,\r\nhogy kÃ¶ltÅ‘nk nem nyelvtant tanul,\r\nsekÃ©ly\r\ne kÃ©j â€“\r\n\r\nÃ‰n egÃ©sz nÃ©pemet fogom\r\nnem kÃ¶zÃ©piskolÃ¡s fokon\r\ntanÃ­â€¦\r\ntani!'),
+(57, 7, 'KARÃ“VAL JÃ–TTÃ‰Lâ€¦', 'KarÃ³val jÃ¶ttÃ©l, nem virÃ¡ggal,\r\nfeleseltÃ©l a mÃ¡svilÃ¡ggal,\r\naranyat igÃ©rtÃ©l nagy zsÃ¡kkal\r\nanyÃ¡dnak Ã©s most itt csÃ¼csÃ¼lsz,\r\n\r\nmint fÃ¡k tÃ¶vÃ©n a bolondgomba\r\n(igy van rÃ¡d, akinek van, gondja),\r\nbe vagy zÃ¡rva a HÃ©t Toronyba\r\nÃ©s mÃ¡r sohasem menekÃ¼lsz.\r\n\r\nTejfoggal kÅ‘be mÃ©rt haraptÃ¡l?\r\nMÃ©rt siettÃ©l, ha elmaradtÃ¡l?\r\nMiÃ©rt nem Ã©jszaka Ã¡lmodtÃ¡l?\r\nVÃ©gre mi kellett volna, mondd?\r\n\r\nMagadat mindig kitakartad,\r\nsebedet mindig elvakartad,\r\nhÃ­res vagy, hogyha ezt akartad.\r\nS hÃ¡ny hÃ©t a vilÃ¡g? Te bolond.\r\n\r\nSzerettÃ©l? MagÃ¡hoz ki fÅ±zÃ¶tt?\r\nBujdokoltÃ¡l? Vajjon ki Å±zÃ¶tt?\r\nGyÅ‘zd, ami volt, ha ugyan gyÅ‘zÃ¶d,\r\nse kÃ©sed nincs, se kenyered.\r\n\r\nBe vagy a HÃ©t Toronyba zÃ¡rva,\r\nÃ¶rÃ¼lj, ha jut tÃ¼zelÅ‘fÃ¡ra,\r\nÃ¶rÃ¼lj, itt van egy puha pÃ¡rna,\r\nhajtsd le szÃ©pen a fejedet.'),
+(53, 6, 'AZ ELKÃ‰SETT', 'KÃ©sÅ‘n keltÃ©l, Ã¶reg! hova indulsz mÃ¡r ma?\r\nNyakadon a vÃ©nsÃ©g tehetetlen jÃ¡rma;\r\nMessze utad cÃ©ljÃ¡t soha el nem Ã©red:\r\nJobb, ha maradsz s "lement napodat dicsÃ©red."\r\n"Tudom, sikerÅ±ltÃ©n sohasem Ã¶rÅ±lÃ¶k,\r\nSzÃ¡ndÃ©komnak tÃ¡n mÃ¡r elejÃ©n kidÅ±lÃ¶k:\r\nDe hiÃº tett is jobb Ã¡ldatlan panasznÃ¡l:\r\nÅ°z gondot, unalmat, Ã©s a mozgÃ¡s hasznÃ¡l."\r\n'),
+(54, 6, 'CSAK AZÃ‰RT IS!', 'Eh, mi gondja a vilÃ¡gnak\r\n   Erre a szakÃ¡llra?\r\nNÃ©kem ebbÅ‘l hasznom lehet,\r\n   MÃ¡snak meg mi kÃ¡ra?\r\n\r\nFizetÃ©sem mÃ¡r ha nem lesz,\r\n   Kell szakÃ¡ll, hogy lÃ©gyen\r\nMire szegÃ©ny szorult ember\r\n   Kurta kÃ¶lcsÃ¶nt vÃ©gyen.'),
+(55, 7, 'TISZTA SZÃVVEL', 'Nincsen apÃ¡m, se anyÃ¡m,\r\nse istenem, se hazÃ¡m,\r\nse bÃ¶lcsÅ‘m, se szemfedÅ‘m,\r\nse csÃ³kom, se szeretÅ‘m.\r\n\r\nHarmadnapja nem eszek,\r\nse sokat, se keveset.\r\nHÃºsz esztendÅ‘m hatalom,\r\nhÃºsz esztendÅ‘m eladom.\r\n\r\nHogyha nem kell senkinek,\r\nhÃ¡t az Ã¶rdÃ¶g veszi meg.\r\nTiszta szÃ­vvel betÃ¶rÃ¶k,\r\nha kell, embert is Ã¶lÃ¶k.\r\n\r\nElfognak Ã©s felkÃ¶tnek,\r\nÃ¡ldott fÃ¶lddel elfÃ¶dnek\r\ns halÃ¡lt hozÃ³ fÅ± terem\r\ngyÃ¶nyÃ¶rÅ±szÃ©p szÃ­vemen.'),
+(51, 5, 'TÃ‰TOVA Ã“DA', 'MiÃ³ta kÃ©szÃ¼lÃ¶k, hogy elmondjam neked\r\nszerelmem rejtett csillagrendszerÃ©t;\r\negy kÃ©pben csak talÃ¡n, s csupÃ¡n a lÃ©nyeget.\r\nDe nyÃ¼zsgÅ‘ s Ã¡radÃ³ vagy bennem, mint a lÃ©t,\r\nÃ©s nÃ©ha meg olyan, oly biztos Ã©s Ã¶rÃ¶k,\r\nmint kÅ‘ben a megkÃ¶vesÃ¼lt csigahÃ¡z.\r\nA holdtÃ³l cirmos Ã©j mozdul fejem fÃ¶lÃ¶tt\r\ns zizzenve rÃ¶ppenÅ‘ kis Ã¡lmokat vadÃ¡sz.\r\nS mÃ©g mindig nem tudom elmondani neked,\r\nmit is jelent az nÃ©kem, hogy ha dolgozom,\r\nÃ³vÃ³ tekinteted Ã©rzem kezem felett.\r\nHasonlat mit sem Ã©r. FelÃ¶tlik s eldobom.\r\nÃ‰s holnap az egÃ©szet ujra kezdem,\r\nmert annyit Ã©rek Ã©n, amennyit Ã©r a szÃ³\r\nversemben s mert ez addig izgat engem,\r\nmÃ­g csont marad belÅ‘lem s nÃ©hÃ¡ny hajcsomÃ³.\r\nFÃ¡radt vagy s Ã©n is Ã©rzem, hosszÃº volt a nap, -\r\nmit mondjak mÃ©g? a tÃ¡rgyak Ã¶sszenÃ©znek\r\ns tÃ©ged dicsÃ©rnek, zeng egy fÃ©l cukordarab\r\naz asztalon Ã©s csÃ¶ppje hull a mÃ©znek\r\ns mint szÃ­narany golyÃ³ ragyog a teritÅ‘n,\r\ns magÃ¡tÃ³l csendÃ¼l egy Ã¼res vizespohÃ¡r.\r\nBoldog, mert vÃ©led Ã©l. S talÃ¡n lesz mÃ©g idÅ‘m,\r\nhogy elmondjam milyen, mikor jÃ¶ttÃ¶dre vÃ¡r.\r\nAz Ã¡lom hullongÃ³ sÃ¶tÃ©tje meg-megÃ©rint,\r\nelszÃ¡ll, majd visszatÃ©r a homlokodra,\r\nÃ¡lmos szemed bÃºcsÃºzva mÃ©g felÃ©mint,\r\nhajad kibomlik, szÃ©tterÃ¼l lobogva,\r\ns elalszol. PillÃ¡d hosszÃº Ã¡rnya lebben.\r\nKezed pÃ¡rnÃ¡mra hull, elalvÃ³ nyÃ­rfaÃ¡g,\r\nde benned alszom Ã©n is, nem vagy mÃ¡s vilÃ¡g,\r\nS idÃ¡ig hallom Ã©n, hogy vÃ¡ltozik a sok\r\nrejtelmes, vÃ©kony, bÃ¶lcs vonal hÅ±s tenyeredben.'),
+(52, 5, 'A FÃ‰LELMETES ANGYAL', 'A fÃ©lelmetes angyal ma lÃ¡thatatlan\r\nÃ©s hallgat bennem, nem sikolt.\r\nDe nesz hallatszik, felfigyelsz,\r\ncsak annyi, mintha szÃ¶cske pattan,\r\nszÃ©tnÃ©zel s nem tudod ki volt.\r\nÅ az. Csak Ãºjra Ã³vatos ma. KÃ©szÃ¼l.\r\nVÃ©dj meg, hiszen szeretsz. Szeress vitÃ©zÃ¼l.\r\nHa vÃ©lem vagy lapul, de bÃ¡tor\r\nmihelyt magamra hagysz. KikÃ©l a lÃ©lek\r\naljÃ¡bÃ³l Ã©s sikongva vÃ¡dol.\r\nAz Å‘rÃ¼let. Ãšgy munkÃ¡l bennem, mint a mÃ©reg\r\ns csak nÃ©ha alszik. Bennem Ã©l,\r\nde rajtam kÃ­vÃ¼l is. Mikor fehÃ©r\r\na holdas Ã©j, suhogÃ³ saruban\r\nfut a rÃ©ten s anyÃ¡m sÃ­rjÃ¡ban is motoz.\r\nÃ‰rdemes volt-e? - kÃ©rdi tÅ‘le folyton\r\ns felveri. Suttog neki, lÃ¡zÃ­tva fojtÃ³n:\r\nmegszÃ¼lted Ã©s belehaltÃ¡l!\r\nRÃ¡mnÃ©z nÃ©ha s elÅ‘re letÃ©pi a naptÃ¡r\r\nsorjukra vÃ¡rÃ³ lapjait.\r\nMÃ¡r tÅ‘le fÃ¼gg Ã¶rÃ¶kre\r\nmeddig s hova. Szava\r\nmint vÃ­zbe kÅ‘, hullott szivembe\r\ntegnap Ã©jszaka\r\ngyÅ±rÅ±zve, lengve Ã©s pÃ¶rÃ¶gve.\r\nNyugodni kÃ©szÃ¼lÅ‘dtem Ã©ppen,\r\nte mÃ¡r aludtÃ¡l. Meztelen\r\nÃ¡lltam, mikor megjÃ¶tt az Ã©jben\r\ns vitÃ¡zni kezdett halkan itt velem.\r\nValami furcsa illat szÃ¡llt s hideg\r\nlehellet Ã©rt fÃ¼lÃ¶n. "Vetkezz tovÃ¡bb! -\r\nÃ­gy bÃ­ztatott, - ne vÃ©djen bÅ‘r sem,\r\nnyers hÃºs vagy Ãºgyis Ã©s pucÃ©r ideg.\r\nNyÃºzd meg magad, hiszen bolond,\r\nki bÅ‘rÃ©vel, mint bÃ¶rtÃ¶nÃ©vel henceg.\r\nCsak lÃ¡tszat rajtad az, no itt a kÃ©s,\r\nnem fÃ¡j, egy pillanat csupÃ¡n, egy szisszenÃ©s!"\r\n\r\nS az asztalon felÃ©bredt s villogott a kÃ©s.'),
+(47, 4, 'A magyar paraszt', 'Csak akkor lÃ¡tod Å‘t, ha szÃ¼rke Ã©jjel\r\nszÃ¡guld tovÃ¡bb gÅ‘zvasÃºt veled,\r\ns a hajnal mÃ©rgezÅ‘ lehelletÃ©vel\r\nleng tejszinÅ±n az alvÃ³ tÃ¡j felett.\r\n\r\nMerengve megy elÅ‘re, mÃ©la, Ã¡lmos,\r\nlovÃ¡t magÃ¡ra hagyja, szÃ¡ntani,\r\nolykor kitÃ¡rja karjÃ¡t, mint a tÃ¡ltos,\r\ncsillognak inge hÃ³szÃ­n fodrai.\r\n\r\nRoskadt inakkal lassan ballag aztÃ¡n,\r\nbÃ¶lcs mÃ©labÃº van napsÃ¼tÃ¶tte arcÃ¡n,\r\nde szem nem lÃ¡tta Å‘t kÃ¶nnyezni mÃ©g.\r\n\r\nMint egy bus isten jÃ¡r a zÃ¶ld mezÅ‘ben,\r\ndÃ¶bbenve nÃ©zem, mint halad elÅ‘ttem,\r\nÃ©s nem tudom, mi bÃ¡ntja nagy szivÃ©t.'),
+(48, 4, 'Az Å‘sz honvÃ©dek', 'A rÃ©gisÃ©gtÃ¡rt Å‘rizik mÃ©g\r\nmegtÃ¶rve, bÃºsan, kedvtelen,\r\nmindannyi egy leomlÃ³, csonka oszlop,\r\nmelyrÅ‘l a csillogÃ³ zomÃ¡nc lefoszlott,\r\negy mindÃ©g Ãºj s szent rÃ©gisÃ©g,\r\negy sor vilÃ¡gtÃ¶rtÃ©nelem.\r\n\r\nÃ‰s Å‘sz szakÃ¡llukbÃ³l figyelnek\r\naz ifju nÃ©pre mindenÃ¼tt,\r\naz Ã©gre hitlenÃ¼l kÃ¶nnyezve nÃ©znek,\r\ns roskadva dÅ‘lnek le az agg vitÃ©zek,\r\nzokogva, Ã¡tkozÃ³dva Ã©s\r\nrÃ¡zvÃ¡n Ã¶reg, fÃ¡radt fejÃ¼k...'),
+(49, 4, 'VallomÃ¡s', 'Teljes vilÃ¡gi Ã©letemben\r\nszelÃ­d a-mollban udvaroltam;\r\nnem volt sosem merÃ©sz frivolsÃ¡g,\r\npajzÃ¡n enyelgÃ©s a dalomban.\r\n\r\nA jourokon nem egy koros szÅ±z\r\nÃ©rzelmesen szÃ³lott szivemhez,\r\nbÃ­ztatva egyre, hogy maradjak\r\ntovÃ¡bbra is jÃ³, illedelmes.\r\n\r\nAz ablakon Ã¡t csÃ³kolÃ³ztam,\r\nde akkor is nagyon szerÃ©nyen:\r\nÃ¡lom-remÃ©nyt, kÃ©pzelt szerelmet\r\nszÃ­vtam magamba holdas Ã©jen.\r\n\r\nAz ideÃ¡l arany hajÃ¡ra\r\nkÃ¶ltÅ‘i lÃ¡zban verset Ã­rtam,\r\ns mÃ¡s csÃ³kolgatta hamvas arcÃ¡t,\r\nmÃ­g Ã¼nnepeltem dalaimban.\r\n\r\nSÃ³hajtozÃ³ nagy mÃ©labÃºmÃ©rt\r\na lÃ¡nynÃ©p oldalamra pÃ¡rtolt;\r\ndÃ­csÃ©rt is sok, de a szÃ­vÃ©ben\r\nazt mondta mind: "De nagy szamÃ¡r volt!"'),
+(45, 3, 'Ã‰N KEDVES RÃ“ZSAFÃ', 'VirÃ¡g, felÃ©m Ã¡gaskodÃ³ban,\r\nMÃ¡jus-szÃ©pe, kinÃ¡lta magÃ¡t;\r\n"Van egy kedves RÃ³zsafÃ¡m", szÃ³ltam,\r\nS nem kellett a drÃ¡ga virÃ¡g.\r\n\r\nAkkor kedves FÃ¡cskÃ¡mhoz mentem:\r\nÅrzÃ¶m napon, Ã©jjelen is;\r\nDe a fÃ©ltÃ©keny elfordult menten,\r\nS gyÃ¶nyÃ¶rÃ¶m ma csupÃ¡n a tÃ¶vis.'),
+(46, 3, 'ISTENI KÃ‰PMÃS', 'KegyetlensÃ©g: emberi szÃ­v,\r\nFÃ©ltÃ©kenysÃ©g: emberi kÃ©p,\r\nTerror: istenember-alak,\r\nTitok: emberi Ã¶ltÃ¶zÃ©k.\r\n\r\nEmber-Ã¶ltÃ¶zÃ©k: vert acÃ©l,\r\nEmber-alak: kohÃ³, s lobog,\r\nEmber-kÃ©p: zÃ¡rt kemenceszÃ¡j,\r\nEmberi szÃ­v: Ã©hes torok.'),
+(43, 1, 'A vak szonettje', 'TÅ±nÅ‘dÃ¶m olykor, mÃ©rt szÃ¡llt rÃ¡m homÃ¡ly\r\nÃ‰ltem felÃ©n? E tÃ¡g fÃ¶ld vak legÃ©n\r\nTalentumom tÃ©tlen mÃ©rt rejtem Ã©n,\r\nMely Ã­gy elÃ¡sva bennem kÃ©sz halÃ¡l?\r\nHa majd a szÃ¡monkÃ©rÅ‘ Ã³ra szÃ¡ll,\r\nUram feddÃ©se nem lesz-Ã© kemÃ©ny?\r\n,,Mit kezdjek Ã­gy, ha nincs munkÃ¡mra fÃ©ny?``\r\nLÃ¡zongok halkan. Ãm vigaszt talÃ¡l\r\nTÃ¼relmem Ã©s szÃ³l: ,,Senki sem viszen\r\nMÃ©ltÃ³ munkÃ¡t ElÃ©. Csak tÅ±rd szelÃ­d\r\nIgÃ¡jÃ¡t, Ãºgy a jÃ³. Hisz Å a szent\r\nKirÃ¡ly. A szÃ¡razfÃ¶ldÃ¶n Ã©s vÃ­zen\r\nSÃ¼rÃ¶gteti szolgÃ¡i ezreit,\r\nS az is cselÃ©dje, ki csak vÃ¡r s mereng.'),
+(44, 3, 'TIGRIS', 'Tigris, tigris, csÃ³vafÃ©ny\r\nÃ‰jszakÃ¡knak erdejÃ©n,\r\nMily kÃ©z adta teneked\r\nSzÃ¶rnyÃ¼ Ã©s szÃ©p termeted?\r\n\r\nMily mÃ©lyben, Ã©g-tÃ¡jakon\r\nIzzott a szemed vakon?\r\nVolt tÃ¼zÃ©t felkapni vÃ©sz?\r\nVolt-e megragadni kÃ©z?\r\n\r\nSzived izmait mi csel\r\nÃ‰s mi vÃ¡ll csavarta fel?\r\nÃ‰s mikor vert, volt erÅ‘,\r\nKÃ©z-lÃ¡b, dacra vakmerÅ‘?\r\n\r\nVolt pÃ¶rÃ¶ly? Ã©s lÃ¡nc-e, tÃ¶bb?\r\nMily kohÃ³n forrt a velÅ‘d?\r\nVolt Ã¼llÅ‘? volt vad kapocs,\r\nGyilkos prÃ©sÃ©vel dacos?\r\n\r\nHogy a csillagfÃ©ny kigyult\r\nS az Ã©g nedves kÃ¶nnye hullt,\r\nRÃ¡d mosolygott AlkotÃ³d?\r\nKi bÃ¡rÃ¡nyt is alkotott?\r\n\r\nTigris, tigris, csÃ³vafÃ©ny\r\nÃ‰jszakÃ¡knak erdejÃ©n,\r\nMily kÃ©z adta teneked\r\nSzÃ¶rnyÃ¼ Ã©s szÃ©p termeted?');
+
+-- --------------------------------------------------------
+
+--
 -- Tábla szerkezet: `poets`
 --
 
 CREATE TABLE IF NOT EXISTS `poets` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(25) NOT NULL,
+  `name` varchar(25) CHARACTER SET ucs2 COLLATE ucs2_hungarian_ci NOT NULL,
   `nationality` varchar(3) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
 
 --
 -- A tábla adatainak kiíratása `poets`
@@ -34,11 +72,15 @@ INSERT INTO `poets` (`id`, `name`, `nationality`) VALUES
 (1, 'John Milton', 'eng'),
 (2, 'William Golding', 'eng'),
 (3, 'William Blake', 'eng'),
-(4, 'Kosztolányi Dezsö', 'hun'),
+(4, 'Kosztolányi Dezső', 'hun'),
 (5, 'Radnóti Miklós', 'hun'),
 (6, 'Arany János', 'hun'),
 (7, 'József Attila', 'hun'),
-(8, 'Petöfi Sándor', 'hun');
+(8, 'Petőfi Sándor', 'hun'),
+(16, 'sadsadad', 'eng'),
+(15, 'sadsadad', 'eng'),
+(17, 'Kolto', 'eng'),
+(18, 'Kolto', 'eng');
 
 -- --------------------------------------------------------
 
@@ -51,40 +93,49 @@ CREATE TABLE IF NOT EXISTS `users` (
   `username` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
+  `admin` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=30 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
 
 --
 -- A tábla adatainak kiíratása `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
-(1, 'test', 'sadsda@gmail.com', 'asd'),
-(2, 'Tesztfiok', 'teszt@gmail.com', '0b8b99a8625f613bf11c458c6f2fcb73'),
-(3, 'Te', 'tes@gmail.com', '28b662d883b6d76fd96e4ddc5e9ba780'),
-(4, 'asd', 'asd@gmail.com', '7815696ecbf1c96e6894b779456d330e'),
-(5, 'helo', 'helo@gmail.com', 'c3557ca22ada1ccafcc43f8013ef0251'),
-(6, 'elso', 'elso@gmail.com', '6e317dbf8a7967e18842c532069e11a5'),
-(7, 'masodik', 'masodik@gmail.com', '19248fa849638e84819f18f7d39a1fe7'),
-(8, 'asdxd', '', 'd41d8cd98f00b204e9800998ecf8427e'),
-(9, 'ElsoFiok', 'elsofiok@gmail.com', '6187d27bc81985b872ca8e13e1e6f05a'),
-(10, 'MasodikFiok', 'asd', '7815696ecbf1c96e6894b779456d330e'),
-(11, 'asda', 'xasdf', 'd41d8cd98f00b204e9800998ecf8427e'),
-(12, 'awsccac', 'csaca', 'd41d8cd98f00b204e9800998ecf8427e'),
-(13, 'masodikxd', 'asdaxcf', 'd41d8cd98f00b204e9800998ecf8427e'),
-(14, 'assacxasc', 'afeqwwd', 'd41d8cd98f00b204e9800998ecf8427e'),
-(15, 'acaeca', 'ascaasaxwq', 'd41d8cd98f00b204e9800998ecf8427e'),
-(16, 'masodikacace', 'wqeqweeq', 'd41d8cd98f00b204e9800998ecf8427e'),
-(17, 'af ewa ef', 'acczvrs', 'd41d8cd98f00b204e9800998ecf8427e'),
-(18, 'qweeqwe', 'wqeqeqeqeq', 'd41d8cd98f00b204e9800998ecf8427e'),
-(19, 'asdsa', 'sadxxa@gmail.com', 'd41d8cd98f00b204e9800998ecf8427e'),
-(20, 'asdfsdf', 'xaf', 'd41d8cd98f00b204e9800998ecf8427e'),
-(21, 'ascevarwv f', 'rgbrsebteg ', 'd41d8cd98f00b204e9800998ecf8427e'),
-(22, 'arrfgawgawg a', 'elsofioasfafk@gmail.com', '0675943da2a0a44fc10b7b26ff1f6f9d'),
-(23, 'sa', 'fffff', 'd41d8cd98f00b204e9800998ecf8427e'),
-(24, 'NegyedikFiok', 'negyedik@gmail.com', '0976f135ab6508517723d3dfff008516'),
-(25, 'OtodikFiok', 'otodik@gmail.com', '57bac9a90a1626a2f2cd9c38d3969b20'),
-(26, 'Hatodik', 'hatodik@gmail.com', '344a40cb678bdb30bf7a07cc5735a0ee'),
-(27, 'Hetedik', 'hetedik@gmail.com', 'dac9839491c17015ae89c9db02de46e7'),
-(28, 'asd123', 'sasadd@gmail.com', '6f6f5d3fb3c876300515eb69354d4ea6'),
-(29, 'ASDsasad', 'elsoasdfiok@gmail.com', '6e21b2c73ac544a9fff7e677e3d17656');
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `admin`) VALUES
+(1, 'test', 'sadsda@gmail.com', 'asd', 0),
+(2, 'Tesztfiok', 'teszt@gmail.com', '0b8b99a8625f613bf11c458c6f2fcb73', 0),
+(3, 'Te', 'tes@gmail.com', '28b662d883b6d76fd96e4ddc5e9ba780', 0),
+(4, 'asd', 'asd@gmail.com', '7815696ecbf1c96e6894b779456d330e', 0),
+(5, 'helo', 'helo@gmail.com', 'c3557ca22ada1ccafcc43f8013ef0251', 0),
+(6, 'elso', 'elso@gmail.com', '6e317dbf8a7967e18842c532069e11a5', 1),
+(7, 'masodik', 'masodik@gmail.com', '19248fa849638e84819f18f7d39a1fe7', 0),
+(8, 'asdxd', '', 'd41d8cd98f00b204e9800998ecf8427e', 0),
+(9, 'ElsoFiok', 'elsofiok@gmail.com', '6187d27bc81985b872ca8e13e1e6f05a', 1),
+(10, 'MasodikFiok', 'asd', '7815696ecbf1c96e6894b779456d330e', 0),
+(11, 'asda', 'xasdf', 'd41d8cd98f00b204e9800998ecf8427e', 0),
+(12, 'awsccac', 'csaca', 'd41d8cd98f00b204e9800998ecf8427e', 0),
+(13, 'masodikxd', 'asdaxcf', 'd41d8cd98f00b204e9800998ecf8427e', 0),
+(14, 'assacxasc', 'afeqwwd', 'd41d8cd98f00b204e9800998ecf8427e', 0),
+(15, 'acaeca', 'ascaasaxwq', 'd41d8cd98f00b204e9800998ecf8427e', 0),
+(16, 'masodikacace', 'wqeqweeq', 'd41d8cd98f00b204e9800998ecf8427e', 0),
+(17, 'af ewa ef', 'acczvrs', 'd41d8cd98f00b204e9800998ecf8427e', 0),
+(18, 'qweeqwe', 'wqeqeqeqeq', 'd41d8cd98f00b204e9800998ecf8427e', 0),
+(19, 'asdsa', 'sadxxa@gmail.com', 'd41d8cd98f00b204e9800998ecf8427e', 0),
+(20, 'asdfsdf', 'xaf', 'd41d8cd98f00b204e9800998ecf8427e', 0),
+(21, 'ascevarwv f', 'rgbrsebteg ', 'd41d8cd98f00b204e9800998ecf8427e', 0),
+(22, 'arrfgawgawg a', 'elsofioasfafk@gmail.com', '0675943da2a0a44fc10b7b26ff1f6f9d', 0),
+(23, 'sa', 'fffff', 'd41d8cd98f00b204e9800998ecf8427e', 0),
+(24, 'NegyedikFiok', 'negyedik@gmail.com', '0976f135ab6508517723d3dfff008516', 0),
+(25, 'OtodikFiok', 'otodik@gmail.com', '57bac9a90a1626a2f2cd9c38d3969b20', 0),
+(26, 'Hatodik', 'hatodik@gmail.com', '344a40cb678bdb30bf7a07cc5735a0ee', 0),
+(27, 'Hetedik', 'hetedik@gmail.com', 'dac9839491c17015ae89c9db02de46e7', 0),
+(28, 'asd123', 'sasadd@gmail.com', '6f6f5d3fb3c876300515eb69354d4ea6', 0),
+(29, 'ASDsasad', 'elsoasdfiok@gmail.com', '6e21b2c73ac544a9fff7e677e3d17656', 0),
+(31, 'adadadas', 'asfffff@gmail.com', 'c65f03a03c09ea3e0f47e044931b916a', 0),
+(32, 'asdasd', 'asdasd@gmail.com', '0675943da2a0a44fc10b7b26ff1f6f9d', 0),
+(33, 'Administrator', 'admin@admin.com', '588a945bc56336ffe2f113fe6afe11e8', 0),
+(34, 'Tizedik', 'Tizedik@gmail.com', '3139d718defdf10775aa68afa3e224dc', 0),
+(35, 'Test01', 'test@gmail.com', 'e650b82f09e722628871f3b5d8f83434', 0),
+(36, 'Szia01', 'Szia01@gmail.com', 'bf97d6f289818c67f1ecb4149d43b9ba', 0),
+(37, 'saddddddddddddddddd', 'dddsaddddddd@gmail.com', '4c497e6d04566e34e99a60901b3e9c9b', 0),
+(38, 'Legujabb', 'Legujabb01@gmail.com', '59cee2fce5934207fe479cef6c2ab1a0', 0);
