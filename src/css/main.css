@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&family=Oswald:wght@500&family=Smooch&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 @import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
 /*
     #0f4274 - 1kek
     #155696 - 2kek
@@ -253,10 +254,10 @@ input:focus ~ .form-span
 }
 .book {
     height: 200px;
-    width: 45px;
+    width: 75px;
     float: left;
     color: white;
-    font-size: 0.9em;
+    font-size: 20px;
     font-family: Verdana, sans-serif;
     margin: 10px 5px;
     transition: transform 0.4s ease;
@@ -290,24 +291,45 @@ input:focus ~ .form-span
     border-right: 2px solid #EDED80;
     color: black;
 }
-
-.book h2 {
-    padding: 0;
-    font-size: 1em;
-    transform-origin: 0% 0%;
-    transform: rotate(0.25turn) translateY(-35px);
-    width: 170px;
+.paper {
+    position: relative;
+    margin-left: calc(0% + 50px);
+    height: min-content;
+    width: 400px;
+    top: 0%;
+    box-shadow: 0px 0px 0px 0px #888;
+}
+.lines {
+    margin-top: 40px;
+    height: calc(100% - 40px);
+    width: 100%;
+    background-image: repeating-linear-gradient(white 0px, white 24px, steelblue 25px);
+}
+.poem_text {
+    padding: 25px;
+    text-align: center;
+    top: 65px;
+    left: 55px;
+    bottom: 10px;
+    right: 10px;
+    line-height: 25px;
+    font-family: 'Indie Flower';
+    overflow: hidden;
+    outline: none;
+}
+.poem_text h1{
+    font-size: 30px;
+    margin-top: 2px;
+}
+.poem_text h2{
+    margin-top: 25px;
+}
+.poem_text p{
+    margin-top: 28px;
 }
 
-.book h3 {
-    padding: 0;
-    font-size: 0.7em;
-    transform-origin: 0 0;
-    transform: rotate(0.25turn) translateY(-15px) translateX(-20px);
-    width: 150px;
-}
 /*
-  --step--2: clamp(0.43rem, 0.33rem + 0.52vw, 0.70rem);
+--step--2: clamp(0.43rem, 0.33rem + 0.52vw, 0.70rem);
   --step--1: clamp(0.52rem, 0.38rem + 0.69vw, 0.88rem);
   --step-0: clamp(0.63rem, 0.44rem + 0.91vw, 1.09rem);
   --step-1: clamp(0.75rem, 0.51rem + 1.20vw, 1.37rem);

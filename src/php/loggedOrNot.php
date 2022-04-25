@@ -14,13 +14,17 @@
         $row1     = mysqli_fetch_assoc($query1);
         $username = $row1['username'];
         $email    = $row1['email'];
-        $sql2     = "SELECT COUNT(*) AS userscount
-                             FROM users";
+        $sql2     = "SELECT COUNT(*) AS userscount FROM users";
         $query2   = mysqli_query($connect, $sql2);
         $row2     = mysqli_fetch_assoc($query2);
+        $sql3     = "SELECT id FROM users WHERE admin = 1 AND '$userid' = id";
+        $query3   = mysqli_query($connect, $sql3);
         $count    = $row2['userscount'];
-        $html     = "Felhasználó: $username". "<br>" ."Email: $email". "<br>" ."Összes felhasználó: $count". "<br>" ."<a href='src/php/logout.php'>kijelentkezes</a>";
-
+        if($query3->num_rows != 0){
+            $html = "Felhasználó: $username" . "<br>" . "Email: $email" . "<br>" . "Összes felhasználó: $count" . "<br>" . "<a href='src/php/logout.php'>kijelentkezes</a>" . "<br>" . "<a href='admin.php' id='admin' class='white-font'>Admin Felulet</a>";
+        } else{
+            $html = "Felhasználó: $username" . "<br>" . "Email: $email" . "<br>" . "Összes felhasználó: $count" . "<br>" . "<a href='src/php/logout.php'>kijelentkezes</a>";
+        }
         if($needPopup) {
             echo "<script>openModal('success', 'Sikeres bejelentkezes');</script>";
             $_SESSION['needLoginPopup'] = false;

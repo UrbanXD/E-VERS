@@ -74,10 +74,10 @@
             </div>
             <div class="text-small" style="margin-right: 200px">
                 <li id="l6" class="float-right">
-                    <a href="#" class="white-font" style="margin: 0 25px">menu-5</a>
+                    <a href="hungarianPoets.php" class="white-font" style="margin: 0 25px">Magyar Költők</a>
                 </li>
                 <li id="l5" class="float-right">
-                    <a href="#" class="white-font" style="margin: 0 25px">menu-+</a>
+                    <a href="englishPoets.php" class="white-font" style="margin: 0 25px">Angol Költők</a>
                 </li>
                 <li id="l4" class="float-right">
                     <a href="contactPage.php" class="white-font" style="margin: 0 25px">Kapcsolat</a>
