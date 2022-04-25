@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&family=Oswald:wght@500&family=Smooch&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 @import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
 /*
     #0f4274 - 1kek
     #155696 - 2kek
@@ -251,7 +252,7 @@ input:focus ~ .form-span
     color: #0f4274;
     transform: translateY(-25px);
 }
-.shelf_book {
+.book {
     height: 200px;
     width: 45px;
     float: left;
@@ -262,7 +263,7 @@ input:focus ~ .form-span
     transition: transform 0.4s ease;
 }
 
-.shelf_book:hover {
+.book:hover {
     transform: scale(1.05);
 }
 
@@ -290,130 +291,42 @@ input:focus ~ .form-span
     border-right: 2px solid #EDED80;
     color: black;
 }
-
-.shelf_book h2 {
-    padding: 0;
-    font-size: 1em;
-    transform-origin: 0% 0%;
-    transform: rotateY(0.25turn) translateY(-35px);
-    width: 170px;
-}
-
-.shelf_book h3 {
-    padding: 0;
-    font-size: 0.7em;
-    transform-origin: 0 0;
-    transform: rotateY(0.25turn) translateY(-15px) translateX(-20px);
-    width: 150px;
-}
-
-.book {
-    transition: opacity 0.4s 0.2s;
-}
-.page {
-    width: 30vw;
-    height: 44vw;
-    background-color: #111111;
-    float: left;
-    margin-bottom: 0.5em;
-    background: left top no-repeat;
-    background-size: cover;
-}
-.page:nth-child(even) {
-    clear: both;
-}
-.book {
-    perspective: 250vw;
-}
-.book .pages {
-    width: 60vw;
-    height: 44vw;
-    position: relative;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-    border-radius: 4px;
-    /*box-shadow: 0 0 0 1px #e3dfd8;*/
-}
-.book .page {
-    float: none;
-    clear: none;
-    margin: 0;
+.paper {
     position: absolute;
-    top: 0;
-    width: 30vw;
-    height: 44vw;
-    transform-origin: 0 0;
-    transition: transform 1.4s;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    user-select: none;
-    background-color: #f0f0f0;
+    height: 550px;
+    width: 450px;
+    background: rgba(255,255,255,0.9);
+    margin: -225px -225px;
+    left: calc(20% + 500px);
+    top: 60%;
+    box-shadow: 0px 0px 5px 0px #888;
 }
-.book .page:before {
-    content: '';
+.lines {
+    margin-top: 40px;
+    height: calc(100% - 40px);
+    width: 100%;
+    background-image: repeating-linear-gradient(white 0px, white 24px, steelblue 25px);
+}
+.poem_text {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0);
-    transition: background 0.7s;
-    z-index: 2;
+    top: 65px;
+    left: 55px;
+    bottom: 10px;
+    right: 10px;
+    line-height: 25px;
+    font-family: 'Indie Flower';
+    overflow: hidden;
+    outline: none;
 }
-.book .page:nth-child(odd) {
-    pointer-events: all;
-    transform: rotateY(0deg);
-    right: 0;
-    border-radius: 0 4px 4px 0;
-    background-image: linear-gradient(to right, rgba(0,0,0,.15) 0%, rgba(0,0,0,0) 10%);
+.poem_text h1{
+    font-size: 30px;
+    margin-top: 2px;
 }
-.book .page:nth-child(odd):hover {
-    transform: rotateY(-15deg);
+.poem_text h2{
+    margin-top: 25px;
 }
-.book .page:nth-child(odd):hover:before {
-    background: rgba(0, 0, 0, 0.03);
-}
-.book .page:nth-child(odd):before {
-    background: rgba(0, 0, 0, 0);
-}
-.book .page:nth-child(even) {
-    pointer-events: none;
-    transform: rotateY(180deg);
-    transform-origin: 100% 0;
-    left: 0;
-    border-radius: 4px 0 0 4px;
-    border-color: black;
-    background-image: linear-gradient(to left, rgba(0,0,0,.12) 0%, rgba(0,0,0,0) 10%);
-}
-.book .page:nth-child(even):before {
-    background: rgba(0, 0, 0, 0.2);
-}
-.book .page.grabbing {
-    transition: none;
-}
-.book .page.flipped:nth-child(odd) {
-    pointer-events: none;
-    transform: rotateY(-180deg);
-}
-.book .page.flipped:nth-child(odd):before {
-    background: rgba(0, 0, 0, 0.2);
-}
-.book .page.flipped:nth-child(even) {
-    pointer-events: all;
-    transform: rotateY(0deg);
-}
-.book .page.flipped:nth-child(even):hover {
-    transform: rotateY(15deg);
-}
-.book .page.flipped:nth-child(even):hover:before {
-    background: rgba(0, 0, 0, 0.03);
-}
-.book .page.flipped:nth-child(even):before {
-    background: rgba(0, 0, 0, 0);
-}
-.page:nth-child(odd){
-    background-position: right top;
+.poem_text p{
+    margin-top: 28px;
 }
 
 /*

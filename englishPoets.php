@@ -20,6 +20,7 @@
 
 <!----- Kezdőlap ----->
 <div class="max-width" style="max-height: 75vh; position: fixed; margin: 0 0;">
+
     <section class="max-width flex blue-bgc" id="hungarianPoets" style="background-size: cover;">
         <div class="eighty-width brown-bgc" style="width: inherit; height: 550px; margin: 75px auto; border: 10px #7B3F00 solid; overflow: hidden;">
             <?php
